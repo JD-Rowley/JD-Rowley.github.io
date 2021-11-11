@@ -160,4 +160,11 @@ header {
     margin: 2rem
 }
 
+.footer-wrapper ul a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: red;
+    margin-left: 4rem
+}
+
 /* Footer end */
