@@ -17,6 +17,8 @@ body {
     flex-direction: column;
 }
 
+/* Header start */
+
 header {
     padding: 2rem;
 }
@@ -31,11 +33,31 @@ header {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
-.nav-btns ul a:hover {
+.nav-btns ul a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: red;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 300ms ease-in-out;
 }
+
+.nav-btns ul a:hover::before {
+    transform: scaleY(1);
+}
+
+/* Header end */
+
+/* Body start */
 
 .body-container {
     height: 86vh;
@@ -54,7 +76,7 @@ header {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 .title-name {
@@ -83,7 +105,7 @@ header {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .about-section {
@@ -97,20 +119,39 @@ header {
 
 .portfolio-btn-container button {
     background-color: red;
+    border: none;
+    position: relative;
     font-weight: bold;
     font-size: 1.5rem;
     padding: 1rem 2.5rem;
+    z-index: 1;
+    transition: color 300ms ease-in-out;
+}
+
+.portfolio-btn-container button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.portfolio-btn-container button:hover::before {
+    transform: scaleX(1);
 }
 
 .portfolio-btn-container button:hover {
-    background: rgb(255,71,71);
-    background: radial-gradient(ellipse, rgba(255,71,71,1) 0%, rgba(236,24,24,1) 91%);
+    color: red;
 }
+/* Body end */
 
-.portfolio-btn-container button:active {
-    background: rgb(255,0,0);
-    background: radial-gradient(ellipse, rgba(255,0,0,1) 0%, rgba(176,10,10,1) 91%);
-}
+/* Footer start */
 
 .footer-wrapper {
     display: flex;
@@ -118,3 +159,5 @@ header {
     justify-content: end;
     margin: 2rem
 }
+
+/* Footer end */
