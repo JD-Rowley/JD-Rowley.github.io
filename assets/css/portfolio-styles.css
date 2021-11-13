@@ -13,7 +13,7 @@
 
 body {
     background: rgb(55,55,55);
-    background: radial-gradient(circle at 90% 90%, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle at 10% 90%, rgba(55,55,55,1) 0%, rgba(0,0,0,1) 100%);
     min-height: 100vh;
     max-width: 55vw;
     margin: auto;
@@ -28,7 +28,7 @@ body {
 /* header */
 
 header {
-    flex: 1;
+    /* flex: 1; */
     padding: 1rem;
 }
 
@@ -69,14 +69,16 @@ header {
 /* main body */
 
 .flex-container {
-    flex: 10;
     display: flex;
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
+
+/* featured projects */
 
 .feature-1-container {
     flex: 1;
-    height: 40vh;
     text-align: end;
     display: flex;
     flex-direction: column;
@@ -88,63 +90,93 @@ header {
     padding: 1rem;
 }
 
-.project-info {
+.feature-project {
     display: flex;
+    flex-direction: column;
 }
 
-.project-info ul li {
+.feature-project a {
+    text-decoration: none;
+}
+
+.feature-project ul li {
     list-style: none;
     margin: 1rem;
 }
 
-.project-info ul li b {
+ul li b {
     color: var(--primary);
 }
 
-.project-info-1 {
-    justify-content: end;
-    margin: 2rem;
-}
-
-.project-info-1 ul li {
-    text-align: end;
-    margin-top: 0;
-}
-
-.vertical-border {
-    height: 40vh;
-    border-right: 1px solid var(--primary);
+.feature-img {
+    margin: 1rem;
 }
 
 .feature-2-container {
     flex: 1;
-    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-left: 1px solid var(--primary);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.project-info-2 {
+/* featured projects */
+
+/* other projects */
+
+.other-projects {
+    border-bottom: 1px solid var(--primary);
+}
+
+.other-projects h2 {
+    font-weight: lighter;
+    padding: 1rem;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 13vw;
     margin: 2rem;
 }
 
-.project-info-2 ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.card-header {
+    background-color: var(--primary);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: .5rem;
 }
 
-.project-info-2 ul li {
-    margin-bottom: 0
+.project-card ul {
+    border: 1px solid var(--primary);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
 }
+
+.project-card ul li {
+    list-style: none;
+    margin: .5rem;
+}
+
+/* other projects */
 
 /* main body */
 
 /* footer */
 
-footer {
+/* footer {
     flex: 1;
-}
+} */
 
 .footer-wrapper {
     display: flex;
