@@ -28,7 +28,7 @@ body {
 /* header */
 
 header {
-    /* flex: 1; */
+    flex: 1;
     padding: 1rem;
 }
 
@@ -54,6 +54,7 @@ header {
     bottom: 0;
     right: 0;
     background-color: var(--primary);
+    border-bottom-left-radius: 10px;
     z-index: -1;
     transform: scaleY(0);
     transform-origin: top;
@@ -88,6 +89,14 @@ header {
 .project {
     background-color: var(--primary);
     padding: 1rem;
+}
+
+.project-1 {
+    border-bottom-left-radius: 10px;
+}
+
+.project-2 {
+    border-top-right-radius: 10px;
 }
 
 .feature-project {
@@ -151,15 +160,13 @@ ul li b {
 
 .card-header {
     background-color: var(--primary);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-right-radius: 10px;
     padding: .5rem;
 }
 
 .project-card ul {
     border: 1px solid var(--primary);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
     padding: 1rem;
 }
 
@@ -174,9 +181,11 @@ ul li b {
 
 /* footer */
 
-/* footer {
+footer {
     flex: 1;
-} */
+    border-top: 1px solid var(--primary);
+    padding: 1rem;
+}
 
 .footer-wrapper {
     display: flex;
@@ -184,14 +193,15 @@ ul li b {
     margin: 1rem
 }
 
-.footer-wrapper a {
+.footer-wrapper div a {
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--primary);
+    transition: transform 300ms ease-in-out;
 }
 
-.footer-wrapper a:hover {
-    color: var(--secondary);
+.social a:hover {
+    transform: scale(1.5);
 }
 
 /* footer */
