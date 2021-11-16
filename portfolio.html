@@ -23,33 +23,47 @@
             </div>
         </header>    
         <div class="flex-container">
-            <div class="feature-1-container">
-                <div class="feature-project-1 feature-project">
-                    <a href=""><h2 class="project project-1">LocalGrub</h2></a>
-                </div>
-                <div class="feature-el feature-el-1">
-                    <ul class="project-description project-description-1">
+            <a class="fas fa-chevron-left slide-btn prev" onclick="plusSlides(-1)"></a>
+
+            <div class="slides">
+                <div class="feature-el">
+                    <img src="https://via.placeholder.com/1920x1080.jpg" class="slide-img" alt="">
+                    <a href=""  class="title project"><h1>Dog Dossier</h1></a>
+                    <ul>
                         <li><b>GitHub:</b> </li>
                         <li><b>Description:</b> An app allowing domestic abuse victims to get help that looks like food delivery.</li>
                         <li><b>Languages:</b> HTML, CSS, Javascript</li>
                     </ul>
-                    <img src="https://via.placeholder.com/250x200.jpg" alt="">
                 </div>
             </div>
-            <!-- <div class="vertical-border"></div> -->
-            <div class="feature-2-container">
-                <div class="feature-el feature-el-2">
-                    <img src="https://via.placeholder.com/250x200.jpg" alt="">
-                    <ul class="project-description project-description-2">
-                        <li><b>GitHub:</b> <a href="https://the-dog-dossier.herokuapp.com">The Dog Dossier</a></li>
-                        <li><b>Description:</b> A database containing information for dog owners and aspiring dog owners alike.</li>
-                        <li><b>Languages:</b> HTML, CSS, Javascript, Sequelize, Node.js</li>
+            <!-- <div class="slides">
+                <div class="feature-el">
+                    <img src="https://via.placeholder.com/1920x1080.jpg" class="slide-img" alt="">
+                    <a href=""  class="title project"><h1>Dog Dossier</h1></a>
+                    <ul>
+                        <li><b>GitHub:</b> </li>
+                        <li><b>Description:</b> An app allowing domestic abuse victims to get help that looks like food delivery.</li>
+                        <li><b>Languages:</b> HTML, CSS, Javascript</li>
                     </ul>
                 </div>
-                <div class="feature-project-2 feature-project">
-                    <a href="https://the-dog-dossier.herokuapp.com"><h2 class="project project-2">Dog Dossier</h2></a>
+            </div>
+            <div class="slides">
+                <div class="feature-el">
+                    <img src="https://via.placeholder.com/1920x1080.jpg" class="slide-img" alt="">
+                    <a href=""  class="title project"><h1>Dog Dossier</h1></a>
+                    <ul>
+                        <li><b>GitHub:</b> </li>
+                        <li><b>Description:</b> An app allowing domestic abuse victims to get help that looks like food delivery.</li>
+                        <li><b>Languages:</b> HTML, CSS, Javascript</li>
+                    </ul>
                 </div>
-            </div>  
+            </div> -->
+
+            <a class="fas fa-chevron-right slide-btn next" onclick="plusSlides(1)"></a>
+            <div class="nav-circles">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
         </div>
         <div class="other-projects">
         <h2>Other projects:</h2>
@@ -124,5 +138,6 @@
             </div>
         </footer>
     </div>
+    <script src="/assets/js/portfolio.js"></script>
 </body>
 </html>
