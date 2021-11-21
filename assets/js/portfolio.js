@@ -1,35 +1,32 @@
+const btnPrev = document.querySelector('.prev');
+const btnNext = document.querySelector('.next');
+const carousel = document.querySelector('.carousel-container');
+const slidesContainer = document.querySelectorAll('.slides');
+
 // slideshow
 
-const slideIndex = 1;
-slideShow(slideIndex);
+let currentSlide = 0;
+const numSlides = document.querySelector('.slides').childElementCount;
 
-// next/prev controls
-function plusSlides(n) {
-    slideShow(slideIndex += n);
+function modulo(number, mod) {
+    let result = number % mod;
+    if (result < 0) {
+        result += mod;
+    }
+    return result;
 }
 
-// image controls
-function currentSlide(n) {
-    slideShow(slideIndex = n);
+function handleNext() {
+    currentSlide = modulo(currentSlide + 1, numSlides);
+    carousel.style.setProperty('--current-slide', currentSlide);
 }
 
-function slideShow(n) {
-    const i;
-    const slides = document.getElementsByClassName('slides');
-    const navCirlces = document.getElementsByClassName('nav-circles');
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].getElementsByClassName.display = 'none';
-    }
-    for (i = 0; i < navCirlces.length; i++) {
-        navCirlces[i].className = navCirlces[i].className.replace(' active', '');
-    }
-    slides[slideIndex-1].getElementsByClassName.display = 'block';
-    navCirlces[slideIndex-1].className += " active";
+function handlePrevious() {
+    currentSlide = modulo(currentSlide - 1, numSlides);
+    carousel.style.setProperty('--current-slide', currentSlide);   
 }
+
+// slideshow
+
+btnPrev.addEventListener('click', handlePrevious);
+btnNext.addEventListener('click', handleNext);
